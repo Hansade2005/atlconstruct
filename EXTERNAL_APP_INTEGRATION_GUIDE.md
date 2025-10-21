@@ -35,7 +35,6 @@ https://pipilot.dev/workspace/123/database/tables/456
                                       ^^^          ^^^
                                   Database ID   Table ID
 ```
-
 ### Step 3: Use in Your App
 
 #### **Next.js App (Vercel):**
