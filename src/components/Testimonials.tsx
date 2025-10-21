@@ -6,22 +6,34 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
 const testimonials = [
   {
-    name: 'John Smith',
-    position: 'CEO, TechCorp',
-    message: 'ATL Construction delivered our office complex on time and exceeded our expectations. Their attention to detail is unmatched.',
-    image: 'https://api.a0.dev/assets/image?text=Professional businessman portrait&aspect=1:1&seed=test-1'
+    name: 'Ahmed Hassan',
+    position: 'Restaurant Owner, Downtown Toronto',
+    message: 'We were skeptical about renovating our family restaurant during peak hours, but ATL Construction managed it flawlessly. They worked after closing time and finished ahead of schedule. The new dining area has boosted our customer turnout by 30%! Their team was respectful and cleaned up every day.',
+    image: 'https://api.a0.dev/assets/image?text=Middle Eastern restaurant owner smiling in front of renovated space&aspect=1:1&seed=real-test-1'
   },
   {
-    name: 'Sarah Johnson',
-    position: 'Homeowner',
-    message: 'Building our dream home with ATL was a fantastic experience. They made the process smooth and stress-free.',
-    image: 'https://api.a0.dev/assets/image?text=Professional woman portrait&aspect=1:1&seed=test-2'
+    name: 'Maria Rodriguez',
+    position: 'Homeowner, Vaughan',
+    message: 'ATL built our custom two-story home from the ground up. They handled the winter delays professionally and communicated every step. Our kids love the backyard play area they added. Budget was spot-on, and the quality is top-notch. We\'d hire them again in a heartbeat.',
+    image: 'https://api.a0.dev/assets/image?text=Latin American mother with family in new suburban home&aspect=1:1&seed=real-test-2'
   },
   {
-    name: 'Mike Davis',
-    position: 'Property Developer',
-    message: 'Their expertise in commercial projects is evident. Highly recommend for any construction needs.',
-    image: 'https://api.a0.dev/assets/image?text=Construction professional portrait&aspect=1:1&seed=test-3'
+    name: 'David Chen',
+    position: 'Property Manager, Condo Association',
+    message: 'After the storm damaged our building\'s roof, ATL was on site within 24 hours. Their emergency repairs saved us from further water damage. The full roof replacement was done in two weeks with minimal disruption to residents. Outstanding workmanship and fair pricing.',
+    image: 'https://api.a0.dev/assets/image?text=Asian property manager inspecting construction site&aspect=1:1&seed=real-test-3'
+  },
+  {
+    name: 'Linda Thompson',
+    position: 'Retired Teacher, Scarborough',
+    message: 'I needed a wheelchair-accessible bathroom added to my bungalow. ATL\'s crew was patient, explained everything, and even suggested energy-efficient upgrades. The project came in under budget and on time. Now I can age in place comfortably. Highly recommend their residential work!',
+    image: 'https://api.a0.dev/assets/image?text=Elderly white woman in accessible home renovation&aspect=1:1&seed=real-test-4'
+  },
+  {
+    name: 'Raj Patel',
+    position: 'Small Business Owner, Markham',
+    message: 'ATL converted our old warehouse into a modern retail space. They navigated all the permits and dealt with unexpected foundation issues professionally. The result is a beautiful showroom that\'s increased our sales. Their project manager was always reachable and kept us informed.',
+    image: 'https://api.a0.dev/assets/image?text=South Asian entrepreneur in commercial retail space&aspect=1:1&seed=real-test-5'
   }
 ]
 
