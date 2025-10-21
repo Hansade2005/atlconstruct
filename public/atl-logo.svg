@@ -1,0 +1,9 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ATL Text -->
+  <text x="0" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a">ATL</text>
+  <!-- Construction Icon: Hammer -->
+  <g transform="translate(75, 10)">
+    <rect x="0" y="10" width="4" height="15" fill="#1e3a8a"/>
+    <rect x="-5" y="20" width="14" height="4" fill="#1e3a8a"/>
+  </g>
+</svg>

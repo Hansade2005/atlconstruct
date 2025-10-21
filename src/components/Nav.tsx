@@ -8,8 +8,8 @@ const Nav = () => {
     <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold text-primary">
-            ATL Construction
+          <Link to="/">
+            <img src="/atl-logo.svg" alt="ATL Construction" className="h-8 w-auto" />
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-primary hover:text-accent transition">Home</Link>
