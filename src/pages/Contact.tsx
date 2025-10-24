@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Facebook, Twitter, Instagram, MapPin, Phone, Mail } from 'lucide-react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import { submitContactForm } from '../lib/contactForm'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ const Contact = () => {
     subject: '',
     message: ''
   })
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -19,12 +22,20 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission - for now, just log to console
-    console.log('Contact form submitted:', formData)
-    alert('Thank you for your message! We will get back to you soon.')
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      await submitContactForm(formData)
+      alert('Thank you for your message! We will get back to you soon.')
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred while submitting the form.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -45,6 +56,11 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-primary mb-6">Send Us a Message</h2>
+            {error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md mb-6">
+                {error}
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -124,9 +140,10 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-primary-dark transition duration-300 font-semibold"
+                disabled={isLoading}
+                className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-primary-dark transition duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
@@ -202,7 +219,7 @@ const Contact = () => {
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="ATL Construction Office Location"
