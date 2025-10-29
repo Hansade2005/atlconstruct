@@ -10,7 +10,6 @@ import 'swiper/css/pagination'
 const allProjects = [
   {
     id: 1,
-    title: 'Invergordon',
     description: 'Custom residential project designed by QBS Architects Inc.',
     // Updated image URLs based on extracted data
     images: [
@@ -24,7 +23,6 @@ const allProjects = [
   },
   {
     id: 2,
-    title: 'Hopecrest',
     description: 'Commercial construction project in collaboration with QBS Architects Inc.',
     // Updated image URLs based on extracted data
     images: [
@@ -38,7 +36,6 @@ const allProjects = [
   },
   {
     id: 3,
-    title: 'Thornton A',
     description: 'Renovation project led by QBS Architects Inc.',
     // Updated to include 5 images based on extracted data
     images: [
@@ -53,7 +50,6 @@ const allProjects = [
   },
   {
     id: 4,
-    title: 'Thornton B (In Progress)',
     description: 'Residential project currently in progress, designed by QBS Architects Inc.',
     // Updated image URLs based on extracted data
     images: [
@@ -65,7 +61,6 @@ const allProjects = [
   },
   {
     id: 5,
-    title: 'Thornton C (In Progress)',
     description: 'Residential project currently in progress, designed by QBS Architects Inc.',
     // Updated image URLs based on extracted data
     images: [
@@ -77,7 +72,6 @@ const allProjects = [
   },
   {
     id: 6,
-    title: 'King (In Progress)',
     description: 'In progress residential project designed by QBS Architects Inc.',
     // New project added based on extracted data
     images: [
@@ -89,7 +83,6 @@ const allProjects = [
   },
   {
     id: 7,
-    title: 'Woodrow (In Progress)',
     description: 'In progress residential project designed by QBS Architects Inc.',
     // New project added based on extracted data
     images: [
@@ -147,19 +140,17 @@ const Projects = () => {
                     modules={[Navigation, Pagination]}
                     navigation
                     pagination={{ clickable: true }}
-                    className="h-48"
                   >
                     {project.images.map((image, index) => (
                       <SwiperSlide key={index}>
-                        <img src={image} alt={`${project.title} ${index + 1}`} className="w-full h-48 object-cover" />
+                        <img src={image} alt={`Project image ${index + 1}`} className="w-full h-auto" />
                       </SwiperSlide>
                     ))}
                   </Swiper>
                 ) : (
-                  <img src={project.images[0]} alt={project.title} className="w-full h-48 object-cover" />
+                  <img src={project.images[0]} alt="Project image" className="w-full h-auto" />
                 )}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="inline-block bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -188,7 +179,6 @@ const Projects = () => {
                   ></iframe>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">104 Invergordon Ave</h3>
                   <p className="text-gray-600 mb-4">Completed in 2020 - Scarborough, ON M1S 2Z2</p>
                   <span className="inline-block bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">Residential</span>
                 </div>
@@ -206,7 +196,6 @@ const Projects = () => {
                   ></iframe>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">334 Thornton Rd North</h3>
                   <p className="text-gray-600 mb-4">Completed in 2022 - Oshawa, ON L1J 6T7</p>
                   <span className="inline-block bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">Residential</span>
                 </div>
@@ -224,7 +213,6 @@ const Projects = () => {
                   ></iframe>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">1992 Carncastle Court</h3>
                   <p className="text-gray-600 mb-4">Completed in 2025 - Oshawa, ON L1J 6T7</p>
                   <span className="inline-block bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">Residential</span>
                 </div>
