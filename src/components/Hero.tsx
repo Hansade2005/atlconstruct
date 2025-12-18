@@ -63,6 +63,22 @@ const Hero = () => {
             </div>
           ))}
         </div>
+
+        {/* Stats Section */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+          <div className="animate-on-scroll">
+            <div className="text-4xl md:text-5xl font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">200+</div>
+            <div className="text-lg opacity-90">Projects Completed</div>
+          </div>
+          <div className="animate-on-scroll">
+            <div className="text-4xl md:text-5xl font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">15+</div>
+            <div className="text-lg opacity-90">Years Experience</div>
+          </div>
+          <div className="animate-on-scroll">
+            <div className="text-4xl md:text-5xl font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">100%</div>
+            <div className="text-lg opacity-90">Client Satisfaction</div>
+          </div>
+        </div>
       </div>
 
       {/* Scroll Indicator */}
