@@ -7,6 +7,7 @@ import AboutSection from '../components/AboutSection'
 import FeaturedProjects from '../components/FeaturedProjects'
 import OurProcess from '../components/OurProcess'
 import Testimonials from '../components/Testimonials'
+import CTASection from '../components/CTASection'
 import Footer from '../components/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -54,6 +55,7 @@ const Home = () => {
       <FeaturedProjects />
       <OurProcess />
       <Testimonials />
+      <CTASection />
       <Footer />
     </div>
   )
