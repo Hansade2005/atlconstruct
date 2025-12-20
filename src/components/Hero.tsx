@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://api.a0.dev/assets/image?text=Professional construction workers building modern high-rise in downtown Toronto with blue sky and cranes&aspect=16:9&seed=atl-hero-new"
+          src="https://static.wixstatic.com/media/90a441_5f65f95edf334849a43b853a2652f251~mv2.jpg/v1/fill/w_327,h_245,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_5f65f95edf334849a43b853a2652f251~mv2.jpg"
           alt="ATL Construction - Building Excellence in Toronto"
           className="w-full h-full object-cover opacity-10"
         />
